@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int x = 55;
+
+void add(int x) // this is original
+{
+    x += 1;
+    cout << "add:"<< x << endl;
+}
+
+
+void sub(int& x) // this is the copy of sub --> REFERENCE
+{
+    x -= 1;
+}
+
+int main()
+{
+    int x = 20;
+    add(x);
+    cout << x << endl;
+    sub(10);
+    cout << x << endl;
+    //sub(10); --> this will be error as this is rvalue
+    // sub(10) -> if void sub(int&& x)
+    // if you want to access global scope then write as below
+    // add(::x);
+    return 0;
+}
