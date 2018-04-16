@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+class One {
+public:
+    double add(double x) { return x+0.1; }
+};
+
+class Two: public One {
+public:
+    using One::add; //now the ouptput will be 11 and 10.6
+    int add(int x) { return x+1; }
+};
+
+int main() {
+    Two obj;
+    cout << obj.add(10) << " " << obj.add(10.5) << endl;
+    return 0;
+}
+
+//Output : 11 11
+
+/*
+Always remember that function overloading work when the scope is common but here both add() function
+belongs to different scope One and Two
+
+for eg :
+int fun(int) {}
+int fun(double){}
+
+these both are in the same scope, not in different classes
+*/
