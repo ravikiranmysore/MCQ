@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+class Base
+{
+    int _a;
+public:
+  // Base() {} // commenting this will solve the problem
+   Base(int a = 0) : _a{a} {}
+ //Base(int a): _a{a} {} // here also same error cause of ambiguity
+ //Base(float a = 0) : _a{a} {} --> this is allowed
+  // parameters are important than the return type in these cases
+   void print() { cout<< _a << endl;}
+};
+
+
+int main()
+{
+    Base b1(10);
+    Base b2; // error : cause of ambiguity
+    b2 = b1;
+    b2.print();
+    return 0;
+}
+
+// this is cause error : cause of 2 default constructor
+
