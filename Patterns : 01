@@ -1,0 +1,128 @@
+//  This is for LOGICAL ABILITY AND PROGRAMMING SKILL 
+// This is to just print square * pattern.
+// for these kinds of pattern better to consider row (starting point)
+// First inner loop is executed.
+// Later outerloop(once after every inner loop is completed)
+//Once the condition in inner loop is finished, then go to next line.
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main ()
+{
+    // Pattern - 01
+    /*
+      
+ *  *  *  *  *
+ 
+ *  *  *  *  *
+ 
+ *  *  *  *  *
+ 
+ *  *  *  *  *
+ 
+ *  *  *  *  *
+ 
+    */
+    
+    for(int m = 1; m <= 5; m++)
+    {
+        for(int n=1; n <=5;n++)
+        {
+            cout << " * ";
+        }
+        cout << "\n" << endl ;
+    }
+    cout << "--------------------------------------------------------------" << endl;
+    
+     
+    
+    
+    // Pattern - 02
+    
+    /*
+    for j :
+    1 2 3 4 5   |
+    1 2 3 4 5   |
+    1 2 3 4 5   + 
+    1 2 3 4 5
+    1 2 3 4 5
+    
+    for i: 
+     1 1 1 1 1  --->
+     2 2 2 2 2
+     3 3 3 3 3
+     4 4 4 4 4
+     5 5 5 5 5
+    */
+    
+    for(int i = 1; i <= 5; i++) // (for int i =5; i <= 1; i--) --> reverse loop
+    {
+        for(int j=1; j <=5; j++)
+        {
+            cout <<setw(2)<< i ;// if i, then you will get
+        }
+        cout << endl ;
+    }
+    cout << "--------------------------------------------------------------" << endl;
+    
+    
+  
+    
+    
+    // Pattern - 03
+    
+    for(int i = 1; i <= 5; i++)
+    {
+        for(int j=1; j <=5; j++)
+        {
+            cout << "Inner loop first : |" << j << "| until condition is satisfied"<< endl;
+        }
+        cout << "\nOuterloop next : > " <<  i << " < until condition is reached\n"<< endl ;
+    }
+    
+    return 0;
+}
+
+/*     
+Inner loop first : |1| until condition is satisfied
+Inner loop first : |2| until condition is satisfied
+Inner loop first : |3| until condition is satisfied
+Inner loop first : |4| until condition is satisfied
+Inner loop first : |5| until condition is satisfied
+
+Outerloop next : > 1 < until condition is reached
+
+Inner loop first : |1| until condition is satisfied
+Inner loop first : |2| until condition is satisfied
+Inner loop first : |3| until condition is satisfied
+Inner loop first : |4| until condition is satisfied
+Inner loop first : |5| until condition is satisfied
+
+Outerloop next : > 2 < until condition is reached
+
+Inner loop first : |1| until condition is satisfied
+Inner loop first : |2| until condition is satisfied
+Inner loop first : |3| until condition is satisfied
+Inner loop first : |4| until condition is satisfied
+Inner loop first : |5| until condition is satisfied
+
+Outerloop next : > 3 < until condition is reached
+
+Inner loop first : |1| until condition is satisfied
+Inner loop first : |2| until condition is satisfied
+Inner loop first : |3| until condition is satisfied
+Inner loop first : |4| until condition is satisfied
+Inner loop first : |5| until condition is satisfied
+
+Outerloop next : > 4 < until condition is reached
+
+Inner loop first : |1| until condition is satisfied
+Inner loop first : |2| until condition is satisfied
+Inner loop first : |3| until condition is satisfied
+Inner loop first : |4| until condition is satisfied
+Inner loop first : |5| until condition is satisfied
+
+Outerloop next : > 5 < until condition is reached
+*/
