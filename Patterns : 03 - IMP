@@ -1,0 +1,121 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main ()
+{
+    char i,j;
+    for( i = 'A'; i <= 'E' ; i++)
+    {
+        for( j = 'A' ; j <= i ; j++)
+        {
+            cout <<setw(2)<< char(i);
+        }
+        cout << endl ;
+    }
+    
+    cout << "----------------- - 13 - -----------------------"<<endl ;
+    for( i = 'A'; i <= 'E' ; i++)
+    {
+        for( j = 'A' ; j <= i ; j++)
+        {
+            cout <<setw(2)<< char(j);
+        }
+        cout << endl ;
+    }
+    cout << "----------------- - 14 - -----------------------"<<endl ;
+    
+    
+    for(int a = 1; a <= 5 ; a++)
+    {
+        for(int b = 5 ; b >= a ; b--)
+        {
+            cout <<setw(2)<< '*';
+        }
+        cout << endl ;
+    }
+    
+    cout << "----------------- - 15 - -----------------------"<<endl ;
+    
+    for(int a = 1; a <= 5 ; a++)
+    {
+        for(int b = 5 ; b >= a ; b--)
+        {
+            cout <<setw(2)<< a;
+        }
+        cout << endl ;
+    }
+    
+    cout << "----------------- - 16- -----------------------"<<endl ;
+    
+    for(int a = 1; a <= 5 ; a++)
+    {
+        for(int b = 5 ; b >= a ; b--)
+        {
+            cout <<setw(2)<< b;
+        }
+        cout << endl ;
+    }
+    
+    cout << "----------------- - 17- -----------------------"<<endl ;
+    
+    for(int aa = 9; aa >= 1 ; aa--)
+    {
+        for(int sb = 1 ; sb <= aa ; sb++)
+        {
+            cout <<setw(3)<< sb;
+        }
+        cout << endl ;
+    }
+    cout << "----------------- - 18 - -----------------------"<<endl ;
+    
+    
+    
+    
+    int n = 9;
+    for(int a =1; a <= n ; a++)
+    {
+        for(int b = n-1 ; b >= a ; b--)
+        {
+            cout << setw(3)<< " ";
+        }
+        for(int k = 1; k <= a; k++)
+        {
+            cout <<setw(3) << k ;
+        }
+        cout << endl ;
+    }
+    cout << "----------------- - 19 - -----------------------"<<endl ;
+    
+    for(int a =1; a <= n ; a++)
+    {
+        
+        for(int k = 1; k <= a; k++)
+        {
+            cout <<setw(3) << k ;
+        }
+        cout << endl ;
+    }
+    
+    cout << "----------------- - 20 - -----------------------"<<endl ;
+    
+    
+    for(int a = n; a >= 1 ; a--)
+    {
+        for(int b = n ; b >= 1 ; b--)
+        {
+            if(a >= b)
+            {
+                cout << setw(3)<< a;
+            }
+            else
+            {
+                cout <<setw(3) << " " ;
+            }
+        }
+        cout << endl ;
+    }
+    
+    return 0;
+}
+
