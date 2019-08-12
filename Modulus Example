@@ -1,0 +1,71 @@
+#include "bits/stdc++.h"
+
+using namespace std;
+
+int main()
+{
+    int cents = 0;
+    cout << " Enter an amount in cents : " << endl;
+    cin >> cents;
+
+    int dollers = 0;
+    int quarter = 0;
+    int dimes = 0;
+    int nickel = 0;
+    int pennies = 0;
+
+    dollers = static_cast<int>(cents / 100);
+    cents = cents - (dollers * 100);
+
+    quarter = floor(cents / 25);
+    cents = cents - (quarter * 25);
+
+    dimes = floor(cents / 10);
+    cents = cents - (dimes * 10);
+
+    nickel = floor(cents / 5);
+    cents = cents - (nickel * 5);
+
+    pennies = cents;
+
+    cout << " Dollers : " << dollers << endl;
+    cout << " Quartes : " << quarter << endl;
+    cout << " Dimes : " << dimes << endl;
+    cout << " Nickles : " << nickel << endl;
+    cout << " pennies : " << cents << endl;
+
+    cout << "\n\nModulo Calc" << endl;
+    cout << 267 / 100 << endl; // result = 2
+    cout << 267 % 100 << endl; // result = 67
+
+    int cents1 = 0;
+    int dollers1 = 0;
+    int quarter1 = 0;
+    int dimes1 = 0;
+    int nickel1 = 0;
+    int pennies1 = 0;
+    int balance = 0;
+    cout << "\n Enter an amount in cents : " << endl;
+    cin >> cents1;
+
+    dollers1 = cents1 / 100;
+    balance = cents1 % 100;
+    cout << " Dollers : " << dollers1 << endl;
+
+    quarter1 = balance / 25;
+    balance %=  25;
+    cout << " Quartes : " << quarter1 << endl;
+
+    dimes1 = balance / 10;
+    balance = balance % 10;
+    cout << " Dimes : " << dimes1 << endl;
+
+    nickel1 =  balance / 5;
+    balance = balance % 5;
+    cout << " Nickles : " << nickel1 << endl;
+
+    pennies1 = balance;
+    cout << " pennies : " << pennies1 << endl;
+
+    return 0;
+}
