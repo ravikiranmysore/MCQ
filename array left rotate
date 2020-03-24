@@ -1,0 +1,50 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+void rotate(vector<int> vec, int d)
+{
+
+	for (int i = 0; i < d; i++) {
+		vec.push_back(vec[0]);
+		vec.erase(vec.begin());
+	}
+
+	for (int i = 0; i < vec.size(); i++) {
+		cout << vec[i] << " ";
+	}
+}
+
+int main()
+{
+
+	int n ;
+	int d;
+	cout << "Enter the size of array : ";
+	cin >> n;
+
+	int* a = new int[n];
+	cout << "Enter the elements for array : ";
+	vector<int> vec;
+
+	for (int i = 0; i<n; i++)
+	{
+		cin >> a[i];
+		vec.push_back(a[i]);
+	}
+
+	cout << "Enter the index to array rotate : ";
+	cin >> d;
+	cout << "\n Array Method : \n";
+	for (int i = 0; i<n; i++)
+	{
+		cout << "   a[ "<< (i+d) << " % "<< n << " ] : " << "a["<< (i + d) % n<<"] : " << a[(i+d)%n] << endl;
+	}
+
+	cout << "\n Vector Method : " ;
+	rotate(vec, d % n);
+
+	getchar();
+	return 0;
+}
